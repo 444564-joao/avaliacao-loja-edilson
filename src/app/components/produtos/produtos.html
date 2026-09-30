@@ -1,0 +1,37 @@
+<h1>Produtos</h1>
+
+<div class="produtos">
+
+  @for (produto of produtos; track produto.id) {
+
+    <div class="produto">
+
+      <h2>{{ produto.nome }}</h2>
+
+      <p>R$ {{ produto.preco }}</p>
+
+      <p>{{ produto.descricao }}</p>
+
+      <a [routerLink]="['/produto', produto.id]">
+        Ver detalhes
+      </a>
+
+      @if (produto.id === 1) {
+        <img src="imagens/notebook.jpg" alt="Notebook">
+      }
+
+      @if (produto.id === 2) {
+        <img src="imagens/mouse.webp" alt="Mouse">
+      }
+
+      @if (produto.id === 3) {
+        <img src="imagens/teclado.webp" alt="Teclado">
+      }
+
+    </div>
+
+  }
+
+</div>
+
+<p class="mais-produtos">Mais produtos em breve!</p>

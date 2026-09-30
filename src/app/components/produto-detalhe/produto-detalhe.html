@@ -1,0 +1,11 @@
+@if (produto) {
+  <h1>{{ produto.nome }}</h1>
+
+  <p>{{ produto.descricao }}</p>
+
+  <h2>R$ {{ produto.preco }}</h2>
+
+  <a routerLink="/produtos">Voltar para produtos</a>
+} @else {
+  <p>Produto não encontrado.</p>
+}
